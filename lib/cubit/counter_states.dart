@@ -1,7 +1,8 @@
 abstract class CounterStates {
   
 }
-//comment
+//i guess i should also add reset state 
 class CounterAIncrementState extends CounterStates{}
 
 class CounterBIncrementState extends CounterStates{}
+
