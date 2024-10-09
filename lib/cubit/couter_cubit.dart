@@ -1,8 +1,8 @@
 import 'package:basketball_counter/cubit/counter_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CouterCubit extends Cubit<CounterStates> {
-  CouterCubit() : super(CounterAIncrementState());
+class CounterCubit extends Cubit<CounterStates> {
+  CounterCubit() : super(CounterAIncrementState());
 
   int teamAPoints = 0;
   int teamBPoints = 0;
@@ -13,7 +13,13 @@ class CouterCubit extends Cubit<CounterStates> {
   }
 
   void teamBIncreament(int num) {
-    teamAPoints += num;
+    teamBPoints += num;
     emit(CounterBIncrementState());
+  }
+
+  void reset() {
+    teamBPoints = 0;
+    teamAPoints = 0;
+    emit(resetCounter());
   }
 }

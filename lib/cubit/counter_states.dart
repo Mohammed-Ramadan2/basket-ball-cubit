@@ -6,3 +6,6 @@ class CounterAIncrementState extends CounterStates{}
 
 class CounterBIncrementState extends CounterStates{}
 
+class resetCounter extends CounterStates{}
+
+
